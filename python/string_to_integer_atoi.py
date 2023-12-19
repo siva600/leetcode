@@ -1,9 +1,8 @@
 class Solution:
     # @return an integer
     def atoi(self, str):
-        str = str.lstrip(' ').rstrip(' ');
 
-        if str == '':
+        if (str := str.lstrip(' ').rstrip(' ')) == '':
             return 0
 
         sign = 1
@@ -13,8 +12,7 @@ class Solution:
         elif str[0] == '+':
             str = str[1:]
 
-        lens = len(str)
-        if lens == 0:
+        if (lens := len(str)) == 0:
             return 0
 
 

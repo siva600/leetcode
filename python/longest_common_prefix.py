@@ -1,8 +1,7 @@
 class Solution:
     # @return a string
     def longestCommonPrefix(self, strs):
-        lenstrs = len(strs)
-        if lenstrs == 0:
+        if (lenstrs := len(strs)) == 0:
             return ''
         if lenstrs == 1:
             return strs[0]

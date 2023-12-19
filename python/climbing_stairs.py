@@ -7,8 +7,7 @@ class Solution:
         count = 0
         d = {}
         for i in range(n + 1):
-            m = n - i
-            if m == 0:
+            if (m := n - i) == 0:
                 count += 1
             elif m % 2 == 0:
                 key = str(i) + '_' + str(m)
