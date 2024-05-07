@@ -1,3 +1,5 @@
+import math
+
 class Solution:
         # @return a float
         def findMedianSortedArrays(self, A, B):
@@ -36,9 +38,9 @@ class Solution:
 
 # tests
 s = Solution()
-assert s.findMedianSortedArrays([1,2,3,5], [2,5]) == 2.5
+assert math.isclose(s.findMedianSortedArrays([1,2,3,5], [2,5]), 2.5, rel_tol=1e-09, abs_tol=0.0)
 assert s.findMedianSortedArrays([1,2,3,5], [2]) == 2
 assert s.findMedianSortedArrays([1,2,3,5], [8]) == 3
 assert s.findMedianSortedArrays([1,2], [1, 1]) == 1
 assert s.findMedianSortedArrays([2,3,4,5], [1]) == 3
-assert s.findMedianSortedArrays([2,3,4, 5, 6], [1]) == 3.5
+assert math.isclose(s.findMedianSortedArrays([2,3,4, 5, 6], [1]), 3.5, rel_tol=1e-09, abs_tol=0.0)
